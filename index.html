@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wiztech Automação | Automação Industrial em Salvador/BA</title>
+<meta name="description" content="Programação de CLPs, IHMs e sistemas SCADA, consultoria em engenharia elétrica, laudos com ART e comissionamento em Salvador e região.">
+<meta name="keywords" content="automação industrial, CLP, IHM, SCADA, Siemens, Rockwell, Allen-Bradley, Altus, HI Tecnologia, Telemecanique, Schneider, Salvador, Camaçari, Bahia">
+<meta name="theme-color" content="#0a2540">
+
+<!-- Ícone da aba -->
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Prévia ao compartilhar (WhatsApp, LinkedIn etc.)
+     Quando o domínio sair, troque "https://www.wiztech.com.br" pelo endereço real -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Wiztech Automação">
+<meta property="og:title" content="Wiztech Automação | Automação Industrial em Salvador/BA">
+<meta property="og:description" content="CLPs, IHMs, SCADA, laudos com ART e comissionamento. Atendimento direto com engenheiro eletricista.">
+<meta property="og:url" content="https://www.wiztech.com.br/">
+<meta property="og:image" content="https://www.wiztech.com.br/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@900&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul-escuro: #0a2540;
+    --azul: #0b5cd5;
+    --azul-claro: #e8f1fd;
+    --branco: #ffffff;
+    --cinza-texto: #4a5568;
+    --cinza-borda: #e2e8f0;
+    --raio: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--azul-escuro);
+    background: var(--branco);
+    line-height: 1.6;
+  }
+  a { color: inherit; text-decoration: none; }
+  .container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+  /* Cabeçalho */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--cinza-borda);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: flex; align-items: center; gap: 10px; }
+  .logo img { width: 46px; height: 46px; }
+  .logo-texto { display: flex; flex-direction: column; line-height: 1; }
+  .logo-nome { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 1.35rem; letter-spacing: 1.5px; color: var(--azul-escuro); }
+  .logo-nome b { color: var(--azul); font-weight: 900; }
+  .logo-sub { font-family: 'Rajdhani', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 5.2px; color: var(--azul); margin-top: 4px; padding-left: 2px; }
+  footer .logo-nome { color: #fff; font-size: 1.05rem; }
+  footer .logo-nome b { color: #22d3ee; }
+  footer .logo-sub { color: #7dd3fc; font-size: 0.58rem; letter-spacing: 4px; }
+  footer .logo img { width: 36px; height: 36px; }
+  .menu { display: flex; gap: 28px; font-weight: 500; font-size: 0.95rem; }
+  .menu a:hover { color: var(--azul); }
+  .btn {
+    display: inline-block; padding: 12px 22px; border-radius: 10px;
+    font-weight: 600; font-size: 0.95rem; transition: transform .15s, background .15s;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primario { background: var(--azul); color: var(--branco); }
+  .btn-primario:hover { background: #094bb0; }
+  .btn-secundario { background: var(--branco); color: var(--azul-escuro); border: 1px solid rgba(255,255,255,0.4); }
+  .menu-toggle { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--azul-escuro); }
+
+  /* Hero */
+  .hero {
+    background: linear-gradient(135deg, var(--azul-escuro) 0%, #0d3a75 60%, var(--azul) 100%);
+    color: var(--branco); padding: 96px 0 104px; position: relative; overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px; pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .etiqueta {
+    display: inline-block; padding: 6px 14px; border-radius: 999px;
+    background: rgba(255,255,255,0.12); font-size: 0.85rem; font-weight: 500; margin-bottom: 20px;
+  }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.15; font-weight: 800; max-width: 760px; }
+  .hero p { margin-top: 20px; font-size: 1.15rem; max-width: 620px; opacity: 0.9; }
+  .hero-botoes { margin-top: 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  /* Seções */
+  section { padding: 88px 0; }
+  .secao-titulo { text-align: center; max-width: 640px; margin: 0 auto 52px; }
+  .secao-titulo .pre { color: var(--azul); font-weight: 700; font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; }
+  .secao-titulo h2 { font-size: clamp(1.7rem, 3.5vw, 2.3rem); margin-top: 8px; line-height: 1.2; }
+  .secao-titulo p { color: var(--cinza-texto); margin-top: 12px; }
+
+  /* Serviços */
+  .grid-servicos { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+  .card {
+    border: 1px solid var(--cinza-borda); border-radius: var(--raio); padding: 32px 28px;
+    background: var(--branco); transition: box-shadow .2s, transform .2s, border-color .2s;
+  }
+  .card:hover { box-shadow: 0 12px 32px rgba(10,37,64,0.08); transform: translateY(-3px); border-color: #c5d9f7; }
+  .card-icone {
+    width: 52px; height: 52px; border-radius: 12px; background: var(--azul-claro);
+    display: grid; place-items: center; margin-bottom: 20px;
+  }
+  .card-icone svg { width: 26px; height: 26px; stroke: var(--azul); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .card p { color: var(--cinza-texto); font-size: 0.97rem; }
+  .card ul { margin-top: 14px; list-style: none; }
+  .card li { color: var(--cinza-texto); font-size: 0.93rem; padding-left: 20px; position: relative; margin-bottom: 6px; }
+  .card li::before { content: "✓"; position: absolute; left: 0; color: var(--azul); font-weight: 700; }
+
+  /* Plataformas */
+  .plataformas { padding-top: 0; }
+  .grid-marcas { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+  .marca {
+    border: 1px solid var(--cinza-borda); border-radius: var(--raio); padding: 22px 16px;
+    text-align: center; display: flex; flex-direction: column; gap: 4px;
+    transition: border-color .2s, background .2s;
+  }
+  .marca:hover { border-color: var(--azul); background: var(--azul-claro); }
+  .marca strong { font-size: 1.05rem; }
+  .marca span { color: var(--cinza-texto); font-size: 0.85rem; }
+
+  /* Como trabalho */
+  .fundo-claro { background: var(--azul-claro); }
+  .passos { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; counter-reset: passo; }
+  .passo { background: var(--branco); border-radius: var(--raio); padding: 28px 24px; }
+  .passo::before {
+    counter-increment: passo; content: counter(passo, decimal-leading-zero);
+    display: block; font-size: 2rem; font-weight: 800; color: var(--azul); margin-bottom: 8px;
+  }
+  .passo h3 { font-size: 1.1rem; margin-bottom: 6px; }
+  .passo p { color: var(--cinza-texto); font-size: 0.95rem; }
+
+  /* Sobre */
+  .sobre { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: center; }
+  .sobre-foto {
+    aspect-ratio: 4/5; border-radius: var(--raio);
+    background: linear-gradient(160deg, var(--azul-claro), #cfe0fa);
+    display: grid; place-items: center; color: var(--azul); font-weight: 600; text-align: center; padding: 20px;
+  }
+  .sobre h2 { font-size: clamp(1.7rem, 3.5vw, 2.2rem); line-height: 1.2; margin: 8px 0 16px; }
+  .sobre p { color: var(--cinza-texto); margin-bottom: 14px; }
+  .selos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+  .selo { background: var(--azul-claro); color: var(--azul); font-weight: 600; font-size: 0.88rem; padding: 8px 14px; border-radius: 8px; }
+
+  /* Contato */
+  .contato { background: var(--azul-escuro); color: var(--branco); text-align: center; }
+  .contato h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+  .contato p { opacity: 0.85; margin: 14px auto 0; max-width: 560px; }
+  .contato-opcoes { display: flex; justify-content: center; gap: 16px; margin-top: 36px; flex-wrap: wrap; }
+  .contato-info { margin-top: 32px; font-size: 0.95rem; opacity: 0.8; }
+
+  /* Formulário */
+  .form {
+    background: var(--branco); color: var(--azul-escuro); text-align: left;
+    max-width: 680px; margin: 36px auto 0; border-radius: var(--raio); padding: 28px;
+  }
+  .tipos { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .tipos input { position: absolute; opacity: 0; pointer-events: none; }
+  .tipos span {
+    display: inline-block; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--cinza-borda); font-size: 0.9rem; font-weight: 500;
+  }
+  .tipos input:checked + span { background: var(--azul); color: var(--branco); border-color: var(--azul); }
+  .tipos input:focus-visible + span { outline: 2px solid var(--azul); outline-offset: 2px; }
+  .campos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .campos label { display: flex; flex-direction: column; gap: 6px; font-size: 0.88rem; font-weight: 600; }
+  .campos .largo { grid-column: 1 / -1; }
+  .campos input, .campos textarea {
+    font: inherit; font-weight: 400; padding: 11px 12px; border-radius: 8px;
+    border: 1px solid var(--cinza-borda); color: var(--azul-escuro); background: #f8fafc;
+  }
+  .campos input:focus, .campos textarea:focus { outline: none; border-color: var(--azul); background: var(--branco); }
+  .campos .invalido { border-color: #d93025; }
+  .erro { color: #d93025; font-size: 0.9rem; margin-top: 12px; }
+  .btn-whats {
+    margin-top: 20px; width: 100%; border: none; cursor: pointer;
+    background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 1rem;
+  }
+  .btn-whats:hover { background: #1ebe5a; }
+  .lgpd { color: var(--cinza-texto) !important; opacity: 1 !important; font-size: 0.8rem; margin: 14px 0 0 !important; max-width: none !important; text-align: center; }
+  @media (max-width: 600px) {
+    .campos { grid-template-columns: 1fr; }
+    .form { padding: 20px; }
+  }
+
+  footer { background: #071a2e; color: rgba(255,255,255,0.7); padding: 28px 0; font-size: 0.88rem; }
+  footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; }
+
+  /* Botão flutuante WhatsApp */
+  .whatsapp {
+    position: fixed; right: 20px; bottom: 20px; z-index: 60;
+    width: 58px; height: 58px; border-radius: 50%; background: #25d366;
+    display: grid; place-items: center; box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+  .whatsapp svg { width: 30px; height: 30px; fill: #fff; }
+
+  /* Responsivo */
+  @media (max-width: 820px) {
+    .menu {
+      display: none; position: absolute; top: 68px; left: 0; right: 0;
+      flex-direction: column; gap: 0; background: var(--branco); border-bottom: 1px solid var(--cinza-borda);
+    }
+    .menu.aberto { display: flex; }
+    .menu a { padding: 16px 20px; border-top: 1px solid var(--cinza-borda); }
+    .menu-toggle { display: block; }
+    .nav .btn { display: none; }
+    .hero { padding: 64px 0 72px; }
+    section { padding: 64px 0; }
+    .sobre { grid-template-columns: 1fr; gap: 32px; }
+    .sobre-foto { aspect-ratio: 16/10; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ CABEÇALHO ============ -->
+<header>
+  <div class="container nav">
+    <a href="#inicio" class="logo" aria-label="Wiztech Automação - início">
+      <img src="logo-icone.svg" alt="">
+      <span class="logo-texto">
+        <span class="logo-nome">WIZ<b>TECH</b></span>
+        <span class="logo-sub">AUTOMAÇÃO</span>
+      </span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#plataformas">Plataformas</a>
+      <a href="#como-trabalho">Como trabalho</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#contato" class="btn btn-primario">Solicitar orçamento</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <span class="etiqueta">⚡ Automação industrial · Salvador / BA</span>
+    <h1>Automação e engenharia elétrica para a sua indústria funcionar sem parar.</h1>
+    <p>Programação de CLPs, IHMs e sistemas supervisórios, diagnóstico de falhas e laudos técnicos com ART, feitos diretamente por um engenheiro eletricista.</p>
+    <div class="hero-botoes">
+      <a href="#contato" class="btn btn-primario" style="background:#fff;color:var(--azul-escuro)">Fale comigo</a>
+      <a href="#servicos" class="btn btn-secundario" style="background:transparent;color:#fff">Ver serviços</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section id="servicos">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="pre">Serviços</span>
+      <h2>Do projeto ao comissionamento</h2>
+      <p>Atendimento a indústrias e empresas que precisam de automação confiável e suporte técnico especializado.</p>
+    </div>
+    <div class="grid-servicos">
+      <div class="card">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4M7 9l2 2-2 2M12 13h4"/></svg>
+        </div>
+        <h3>Programação e integração</h3>
+        <p>Desenvolvimento e parametrização de software para automação industrial.</p>
+        <ul>
+          <li>CLPs</li>
+          <li>IHMs</li>
+          <li>Sistemas SCADA / supervisórios</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+        </div>
+        <h3>Engenharia elétrica e consultoria</h3>
+        <p>Diagnóstico técnico e consultoria especializada para resolver problemas e melhorar processos.</p>
+        <ul>
+          <li>Troubleshooting de falhas</li>
+          <li>Consultoria técnica</li>
+          <li>Laudos com ART (CREA-BA)</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icone">
+          <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <h3>Comissionamento</h3>
+        <p>Testes, validação e partida de sistemas, com acompanhamento direto do engenheiro responsável.</p>
+        <ul>
+          <li>Testes de campo</li>
+          <li>Validação de lógica e intertravamentos</li>
+          <li>Partida assistida</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLATAFORMAS ============ -->
+<section class="plataformas" id="plataformas">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="pre">Plataformas</span>
+      <h2>Experiência com os principais fabricantes</h2>
+      <p>Programação, manutenção e migração de sistemas nas plataformas mais usadas na indústria.</p>
+    </div>
+    <div class="grid-marcas">
+      <div class="marca"><strong>Siemens</strong><span>CLPs e IHMs</span></div>
+      <div class="marca"><strong>Rockwell</strong><span>Allen-Bradley</span></div>
+      <div class="marca"><strong>Altus</strong><span>CLPs</span></div>
+      <div class="marca"><strong>HI Tecnologia</strong><span>CLPs e IHMs</span></div>
+      <div class="marca"><strong>Mercato Automação</strong><span>MCP 50 Pro</span></div>
+      <div class="marca"><strong>Telemecanique</strong><span>Schneider Electric</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO TRABALHO ============ -->
+<section class="fundo-claro" id="como-trabalho">
+  <div class="container">
+    <div class="secao-titulo">
+      <span class="pre">Como trabalho</span>
+      <h2>Processo simples e transparente</h2>
+    </div>
+    <div class="passos">
+      <div class="passo">
+        <h3>Conversa inicial</h3>
+        <p>Entendo a necessidade, o equipamento e o prazo da sua operação.</p>
+      </div>
+      <div class="passo">
+        <h3>Proposta técnica</h3>
+        <p>Escopo claro, prazo e valor definidos antes de começar.</p>
+      </div>
+      <div class="passo">
+        <h3>Execução</h3>
+        <p>Desenvolvimento e testes feitos pessoalmente pelo engenheiro responsável.</p>
+      </div>
+      <div class="passo">
+        <h3>Entrega e suporte</h3>
+        <p>Documentação, ART quando aplicável e acompanhamento após a entrega.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre">
+  <div class="container sobre">
+    <!-- Troque este bloco por: <img src="foto.jpg" alt="Alisson Ferreira" class="sobre-foto" style="object-fit:cover"> -->
+    <div class="sobre-foto">Sua foto ou uma foto<br>de projeto aqui</div>
+    <div>
+      <span class="secao-titulo pre" style="color:var(--azul);font-weight:700;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase">Sobre</span>
+      <h2>Atendimento direto com o engenheiro responsável</h2>
+      <p>A Wiztech Automação é conduzida por Alisson Ferreira de Araujo Silva, engenheiro eletricista, que atua pessoalmente em cada projeto, da programação ao comissionamento.</p>
+      <p>Sem intermediários: você fala com quem projeta, programa e assina tecnicamente pelo serviço.</p>
+      <div class="selos">
+        <span class="selo">Engenheiro Eletricista</span>
+        <span class="selo">CREA-BA nº [00000]</span>
+        <span class="selo">Emissão de ART</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="contato" id="contato">
+  <div class="container">
+    <h2>Fale com a Wiztech</h2>
+    <p>Preencha o formulário: a mensagem já sai pronta no WhatsApp, é só enviar.</p>
+
+    <form class="form" id="formContato" novalidate>
+      <div class="tipos" role="radiogroup" aria-label="Tipo de contato">
+        <label><input type="radio" name="tipo" value="Orçamento" checked><span>Orçamento</span></label>
+        <label><input type="radio" name="tipo" value="Dúvida"><span>Dúvida</span></label>
+        <label><input type="radio" name="tipo" value="Reclamação"><span>Reclamação</span></label>
+        <label><input type="radio" name="tipo" value="Elogio"><span>Elogio</span></label>
+        <label><input type="radio" name="tipo" value="Outro"><span>Outro</span></label>
+      </div>
+      <div class="campos">
+        <label>Nome*<input type="text" name="nome" required autocomplete="name"></label>
+        <label>Empresa<input type="text" name="empresa" autocomplete="organization"></label>
+        <label>Telefone / WhatsApp<input type="tel" name="telefone" autocomplete="tel"></label>
+        <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+        <label class="largo">Cidade<input type="text" name="cidade" placeholder="Ex.: Camaçari / BA"></label>
+        <label class="largo">Mensagem*<textarea name="mensagem" rows="4" required placeholder="Descreva o que você precisa"></textarea></label>
+      </div>
+      <p class="erro" id="erroForm" hidden>Preencha nome e mensagem.</p>
+      <button type="submit" class="btn btn-whats">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        Enviar pelo WhatsApp
+      </button>
+      <p class="lgpd">🔒 Seus dados são usados apenas para responder ao seu contato e não são compartilhados com terceiros. O formulário não armazena nada: a mensagem é enviada por você pelo WhatsApp.</p>
+    </form>
+
+    <div class="contato-opcoes">
+      <a href="mailto:contato@wiztech.com.br" class="btn btn-secundario" style="background:transparent;color:#fff">contato@wiztech.com.br</a>
+    </div>
+    <p class="contato-info">Salvador / BA e região</p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span class="logo">
+      <img src="logo-icone-escuro.svg" alt="">
+      <span class="logo-texto">
+        <span class="logo-nome">WIZ<b>TECH</b></span>
+        <span class="logo-sub">AUTOMAÇÃO</span>
+      </span>
+    </span>
+    <span>© <span id="ano"></span> Wiztech Automação · CNPJ 00.000.000/0001-00 · Salvador / BA</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/5571900000000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Wiztech" class="whatsapp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.2-1.4c1.4.8 3 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3C4 15 3.6 13.5 3.6 12c0-4.6 3.8-8.4 8.4-8.4s8.4 3.8 8.4 8.4-3.8 8.2-8.4 8.2z"/></svg>
+</a>
+
+<script>
+  // ===== CONFIGURAÇÃO: troque pelo seu número (DDI + DDD + número, só dígitos) =====
+  const WHATSAPP = '5571900000000';
+
+  // Aplica o número em todos os links de WhatsApp da página
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+    a.href = a.href.replace(/wa\.me\/\d+/, 'wa.me/' + WHATSAPP);
+  });
+
+  // Formulário -> mensagem pronta no WhatsApp
+  document.getElementById('formContato').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const d = Object.fromEntries(new FormData(f));
+    const erro = document.getElementById('erroForm');
+    let ok = true;
+    ['nome', 'mensagem'].forEach(n => {
+      const campo = f.elements[n];
+      const vazio = !campo.value.trim();
+      campo.classList.toggle('invalido', vazio);
+      if (vazio) ok = false;
+    });
+    erro.hidden = ok;
+    if (!ok) return;
+
+    const linhas = [
+      `*${d.tipo} - via site Wiztech*`,
+      '',
+      `*Nome:* ${d.nome.trim()}`,
+      d.empresa.trim() && `*Empresa:* ${d.empresa.trim()}`,
+      d.telefone.trim() && `*Telefone:* ${d.telefone.trim()}`,
+      d.email.trim() && `*E-mail:* ${d.email.trim()}`,
+      d.cidade.trim() && `*Cidade:* ${d.cidade.trim()}`,
+      '',
+      `*Mensagem:*`,
+      d.mensagem.trim()
+    ].filter(l => l !== '' && l !== false).join('\n')
+     .replace(`*\n*Nome`, `*\n\n*Nome`).replace(`\n*Mensagem:*`, `\n\n*Mensagem:*`);
+
+    window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(linhas)}`, '_blank', 'noopener');
+  });
+
+  document.getElementById('ano').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('menuToggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('aberto'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('aberto')));
+</script>
+</body>
+</html>

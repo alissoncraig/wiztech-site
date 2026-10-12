@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="wz" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <!-- trilhas de circuito -->
+  <g fill="none" stroke="url(#wz)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M13.5 21 L8 15.5 H4.5"/>
+    <path d="M50.5 43 L56 48.5 H59.5"/>
+    <path d="M32 10 V3"/>
+    <path d="M32 54 V61"/>
+  </g>
+  <g fill="url(#wz)">
+    <circle cx="4" cy="15.5" r="2.8"/>
+    <circle cx="60" cy="48.5" r="2.8"/>
+    <circle cx="32" cy="3" r="2.8"/>
+    <circle cx="32" cy="61" r="2.8"/>
+  </g>
+  <!-- hexágono -->
+  <polygon points="32,10 50.5,21 50.5,43 32,54 13.5,43 13.5,21" fill="none" stroke="url(#wz)" stroke-width="3.5" stroke-linejoin="round"/>
+  <!-- raio -->
+  <path d="M35.5 16.5 L22 35 H31 L28 47.5 L42 29 H33 Z" fill="url(#wz)"/>
+</svg>
