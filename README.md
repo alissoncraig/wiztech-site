@@ -19,11 +19,11 @@ Hospedagem prevista: GitHub Pages (grátis) + domínio .com.br no Registro.br.
 ### Dados para trocar no `index.html`
 
 - [x] **WhatsApp** — linha `const WHATSAPP = '5571991132719';` (perto do fim). Formato: 55 + DDD + número, só dígitos.
-- [ ] **CNPJ** — rodapé: `CNPJ 00.000.000/0001-00`
-- [ ] **CREA** — seção Sobre: `CREA-BA nº [00000]`
+- [x] **CNPJ** — rodapé: `CNPJ 00.000.000/0001-00`
+- [x] **CREA** — seção Sobre: `CREA-BA nº [00000]`
 - [x] **E-mail** — seção Contato: `contato@wiztechautomacao.com.br` (aparece 2 vezes na mesma linha)
 - [x] **Endereço do site** — topo do arquivo, linhas `og:url` e `og:image`
-- [ ] **Foto** (opcional) — seção Sobre, bloco "Sua foto aqui" (instrução em comentário no código)
+- [x] **Foto** — removida da seção Sobre (sem trabalhos realizados ainda)
 
 ### Outros arquivos
 

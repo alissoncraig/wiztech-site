@@ -147,12 +147,7 @@
   .passo p { color: var(--cinza-texto); font-size: 0.95rem; }
 
   /* Sobre */
-  .sobre { display: grid; grid-template-columns: 1fr 1.3fr; gap: 56px; align-items: center; }
-  .sobre-foto {
-    aspect-ratio: 4/5; border-radius: var(--raio);
-    background: linear-gradient(160deg, var(--azul-claro), #cfe0fa);
-    display: grid; place-items: center; color: var(--azul); font-weight: 600; text-align: center; padding: 20px;
-  }
+  .sobre { max-width: 760px; }
   .sobre h2 { font-size: clamp(1.7rem, 3.5vw, 2.2rem); line-height: 1.2; margin: 8px 0 16px; }
   .sobre p { color: var(--cinza-texto); margin-bottom: 14px; }
   .selos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
@@ -222,8 +217,6 @@
     .nav .btn { display: none; }
     .hero { padding: 64px 0 72px; }
     section { padding: 64px 0; }
-    .sobre { grid-template-columns: 1fr; gap: 32px; }
-    .sobre-foto { aspect-ratio: 16/10; }
   }
 </style>
 </head>
@@ -363,8 +356,6 @@
 <!-- ============ SOBRE ============ -->
 <section id="sobre">
   <div class="container sobre">
-    <!-- Troque este bloco por: <img src="foto.jpg" alt="Alisson Ferreira" class="sobre-foto" style="object-fit:cover"> -->
-    <div class="sobre-foto">Sua foto ou uma foto<br>de projeto aqui</div>
     <div>
       <span class="secao-titulo pre" style="color:var(--azul);font-weight:700;font-size:.85rem;letter-spacing:1.5px;text-transform:uppercase">Sobre</span>
       <h2>Atendimento direto com o engenheiro responsável</h2>
@@ -372,7 +363,7 @@
       <p>Sem intermediários: você fala com quem projeta, programa e assina tecnicamente pelo serviço.</p>
       <div class="selos">
         <span class="selo">Engenheiro Eletricista</span>
-        <span class="selo">CREA-BA nº [00000]</span>
+        <span class="selo">CREA-BA nº 052424890-7</span>
         <span class="selo">Emissão de ART</span>
       </div>
     </div>
@@ -425,7 +416,7 @@
         <span class="logo-sub">AUTOMAÇÃO</span>
       </span>
     </span>
-    <span>© <span id="ano"></span> Wiztech Automação · CNPJ 00.000.000/0001-00 · Salvador / BA</span>
+    <span>© <span id="ano"></span> Wiztech Automação · CNPJ 69.798.762/0001-81 · Salvador / BA</span>
   </div>
 </footer>
 
