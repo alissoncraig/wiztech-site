@@ -18,22 +18,22 @@ Hospedagem prevista: GitHub Pages (grátis) + domínio .com.br no Registro.br.
 
 ### Dados para trocar no `index.html`
 
-- [ ] **WhatsApp** — linha `const WHATSAPP = '5571900000000';` (perto do fim). Formato: 55 + DDD + número, só dígitos.
+- [x] **WhatsApp** — linha `const WHATSAPP = '5571991132719';` (perto do fim). Formato: 55 + DDD + número, só dígitos.
 - [ ] **CNPJ** — rodapé: `CNPJ 00.000.000/0001-00`
 - [ ] **CREA** — seção Sobre: `CREA-BA nº [00000]`
-- [ ] **E-mail** — seção Contato: `contato@wiztech.com.br` (aparece 2 vezes na mesma linha)
-- [ ] **Endereço do site** — topo do arquivo, linhas `og:url` e `og:image`
+- [x] **E-mail** — seção Contato: `contato@wiztechautomacao.com.br` (aparece 2 vezes na mesma linha)
+- [x] **Endereço do site** — topo do arquivo, linhas `og:url` e `og:image`
 - [ ] **Foto** (opcional) — seção Sobre, bloco "Sua foto aqui" (instrução em comentário no código)
 
 ### Outros arquivos
 
-- [ ] `robots.txt` e `sitemap.xml` — conferir se o domínio está certo (`www.wiztech.com.br`)
+- [x] `robots.txt` e `sitemap.xml` — conferir se o domínio está certo (`www.wiztechautomacao.com.br`)
 
 ### Publicação
 
-1. [ ] Registrar o domínio no registro.br com o CNPJ
+1. [x] Registrar o domínio no registro.br
 2. [ ] GitHub: Settings → Pages → Source: `main` / root
-3. [ ] GitHub: Settings → Pages → Custom domain: `www.wiztech.com.br` (cria o arquivo `CNAME` sozinho)
+3. [x] Arquivo `CNAME` com `www.wiztechautomacao.com.br` já está no repositório
 4. [ ] Registro.br → domínio → DNS → "Editar zona" e criar:
 
    | Tipo | Nome | Valor |
@@ -42,7 +42,7 @@ Hospedagem prevista: GitHub Pages (grátis) + domínio .com.br no Registro.br.
    | A | (vazio / @) | 185.199.109.153 |
    | A | (vazio / @) | 185.199.110.153 |
    | A | (vazio / @) | 185.199.111.153 |
-   | CNAME | www | SEU-USUARIO.github.io |
+   | CNAME | www | alissoncraig.github.io |
 
 5. [ ] Esperar o DNS propagar (de minutos a algumas horas) e marcar **Enforce HTTPS** no GitHub Pages
 6. [ ] Testar: abrir o site no celular, enviar o formulário, compartilhar o link no WhatsApp e ver a prévia
